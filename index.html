@@ -52,6 +52,17 @@ footer{text-align:center;border-top:1px solid #39301e;padding:30px;color:#a99d86
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
+ 
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js")
+      .then(() => console.log("Dhamma Alin Ready"))
+      .catch((error) => console.error(error));
+  });
+}
+</script>
+
 <body>
 
 <header>
